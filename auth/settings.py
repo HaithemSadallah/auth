@@ -124,8 +124,8 @@ DATABASES = {
 }
 
 
-database_url=os.environ.get("DATABASE_URL")
-DATABASES['default']= dj_database_url.parse ("postgres://cloud_esor_user:JMgLRQ9io6nXD11aBnwHEH52Yb6x8lPe@dpg-col89f5jm4es738cms6g-a/cloud_esor")
+#database_url=os.environ.get("DATABASE_URL")
+DATABASES['default']= dj_database_url.parse ("postgres://cloud_esor_user:JMgLRQ9io6nXD11aBnwHEH52Yb6x8lPe@dpg-col89f5jm4es738cms6g-a.frankfurt-postgres.render.com/cloud_esor")
 
 
 
