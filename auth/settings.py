@@ -22,13 +22,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =  os.environ.get("SECRET_KEY")
+# SECRET_KEY =  os.environ.get("SECRET_KEY")
+SECRET_KEY = 'django-insecure-#=-fo=9w=o-&uw)4imojgur-sp2!azpexi35ya&j$$sts+gn6+'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG","False").lower() == "true"
+# DEBUG = os.environ.get("DEBUG","False").lower() == "true"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+DEBUG = True
 
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -121,7 +125,7 @@ DATABASES = {
 
 
 database_url=os.environ.get("DATABASE_URL")
-DATABASES['default']= dj_database_url.parse (database_url)
+DATABASES['default']= dj_database_url.parse ("postgres://cloud_esor_user:JMgLRQ9io6nXD11aBnwHEH52Yb6x8lPe@dpg-col89f5jm4es738cms6g-a/cloud_esor")
 
 
 
